@@ -35,7 +35,7 @@ function makeImgGallery(images, gallery) {
   </style>`
 ).join("");
   
-  console.log(newImages)
+  // console.log(newImages)
   gallery.insertAdjacentHTML("afterbegin", newImages);
 }
 makeImgGallery(images, galleryEl)
