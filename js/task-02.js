@@ -17,14 +17,22 @@ const ingredients = [
 
 const ingredientsList = document.querySelector("#ingredients")
 
-function makeIngredientList(ingredients, ingredientsList) {
-   ingredients.map(ingredient => {
-      const ingredientItem = document.createElement("li");
-      ingredientItem.textContent = ingredient;
-      ingredientItem.classList.add("item");
-      // console.log(ingredientItem);
-      ingredientsList.appendChild(ingredientItem);
-})
-  }
-makeIngredientList(ingredients, ingredientsList);
+function makeIngredientList(ingredients) {
+  return ingredients.map(ingredient => {
+    const ingredientItem = document.createElement("li");
+    ingredientItem.textContent = ingredient;
+    ingredientItem.classList.add("item");
+    // console.log(ingredientItem);
+    return ingredientItem;
+    // 
+  
+  });
+ 
+ 
+};
+
+const ingredientsItems = makeIngredientList(ingredients);
+//  console.log(ingredientsItems);
+ ingredientsList.append(...ingredientsItems);
+
 
